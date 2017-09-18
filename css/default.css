@@ -1,0 +1,70 @@
+html,body {
+	width: 100%;
+	height: 100%;
+}
+
+#grid_container {
+	width: 200px;
+	height: 100px;
+	position: relative;
+	left: 50%;
+	top: 48%; /* for optical centering */
+	margin-top: -50px;
+	margin-left: -100px;
+}
+
+.mono {
+	font-family: 'Fjalla One';
+	font-size: 6em;
+	float: left;
+	margin-left: 5px;
+}
+
+@-webkit-keyframes l_fade {
+	0%,100% { top: 0px; left: 0px; }
+	25% { top: -100px; left: 0px; }
+	50% { top: -100px; left: 85px; }
+	75% { top: 0px; left: 85px; }
+}
+
+#l {
+	position: relative;
+	-webkit-animation: l_fade 3s infinite;
+}
+
+@-webkit-keyframes a_move {
+	0%,100% { top: 0px; color: blue; }
+	50% { top: 100px; color: blue; }
+	75% { top: 0px; color: green; }
+}
+
+#a {
+	position: relative;
+	-webkit-animation: a_move 3s ease infinite;
+	cubic-bezier(0,0,1,1); /* www.cubic-bezier.com */
+}
+
+@-webkit-keyframes k_move {
+	0% ,100%{ top: 0px; left: 0px; }
+	75% { top: 0px; left: -100px; }
+}
+
+#k {
+	position: relative;
+	-webkit-animation: k_move 3s infinite;
+}
+
+@-webkit-keyframes e_rotate{
+	0% {-webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+#e {
+	position: relative;
+	transform-origin: 50% 60%; /*rotates on a corner or specific point in the object */
+	-webkit-animation: e_rotate 2.2s linear infinite;
+	-webkit-animation-fill-mode: forwards;
+
+}
+
+
